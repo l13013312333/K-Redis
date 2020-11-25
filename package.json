@@ -1,0 +1,16 @@
+{
+    "name": "K-Redis",
+    "displayName": "K-Redis",
+    "description": "redis created by KUI",
+    "version": "0.0.1",
+    "icon": "https://l13013312333.github.io/K-Redis/redis-logo.png",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Extension Packs"
+    ],
+    "extensionPack": [ 
+        "publisher.extensionName"
+    ]
+}
