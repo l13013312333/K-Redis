@@ -1,16 +1,41 @@
 {
-    "name": "K-Redis",
-    "displayName": "K-Redis",
-    "description": "redis created by KUI",
-    "version": "0.0.1",
-    "icon": "https://l13013312333.github.io/K-Redis/redis-logo.png",
-    "engines": {
-        "vscode": "^1.51.0"
-    },
-    "categories": [
-        "Extension Packs"
-    ],
-    "extensionPack": [ 
-        "publisher.extensionName"
+  "name": "k-redis",
+  "displayName": "K-Redis",
+  "description": "redis created by KUI",
+  "version": "0.0.1",
+  "repository": "",
+  "icon": "https://l13013312333.github.io/K-Redis/redis-logo.png",
+  "author": {
+    "name": "Kui-Hao,Liu",
+    "email": "l13013312333@gmail.com"
+  },
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "activationEvents": [
+    "onCommand:config.commands.redisServer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "title": "K-Redis: Add new Redis Server address",
+        "command": "config.commands.redisServer"
+      }
     ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint . --ext .ts,.tsx",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.0",
+    "@types/vscode": "^1.34.0",
+    "typescript": "^4.0.2"
+  }
 }
